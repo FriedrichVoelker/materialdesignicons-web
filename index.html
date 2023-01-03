@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Material Design Icons</title>
+	<link id="cssLink" rel="stylesheet" href="//cdn.jsdelivr.net/npm/@mdi/font@7.1.96/css/materialdesignicons.min.css">
+	<script defer src="./index.js"></script>
+	<link rel="stylesheet" href="./style.css">
+	
+
+</head>
+<body>
+
+	<!-- <i class="mdi mdi-ab-testing"></i> -->
+
+	<div class="header">
+		<div class="header-left-title">
+			<h2> <i class="mdi mdi-material-design"></i> Material Design Icons <span id="version">v7.1.96</span></h2>
+		</div>
+		<div class="header-right-title">
+			<a href="https://github.com/FriedrichVoelker/materialdesignicons-web">
+			<i class="mdi mdi-github"></i>
+			</a>
+		</div>
+	</div>
+
+	<div class="icons-wrapper parent">
+		<div class="child"></div>
+		<div class="child all-icons">
+			<div class="icons-header">
+				<div>
+					<input type="text" name="search" id="search" placeholder="Search">
+					<button class="btn" id="searchbtn">Search</button>
+				</div>
+				<select id="tag-select">
+					<option value="all" selected>All</option>
+				</select>
+			</div>
+
+			<div class="icons-icons">
+				<div class='loader' id="loading">
+					<div class='loader--dot'></div>
+					<div class='loader--dot'></div>
+					<div class='loader--dot'></div>
+					<div class='loader--dot'></div>
+					<div class='loader--dot'></div>
+					<div class='loader--dot'></div>
+					<div class='loader--text'></div>
+				</div>
+				<div style="text-align: right;">
+					<span id="shownamount">0</span> / <span id="totalamount">0</span>
+				</div>
+
+
+				<span id="all-icons"></span>
+			</div>
+		</div>
+		<div class="child"></div>
+
+	</div>
+	<span class="modal-wrapper">
+		<section id="modal" class="modal hidden">
+			<div class="flex">
+			<button id="modal-close-button" class="btn-close">⨉</button>
+			</div>
+			<div>
+			<h3 id="modal_icon-name" style="color:black">Stay in touch</h3>
+			<i id="modal_icon-icon" style="color:black" class="mdi"></i>
+			<p id="modal_icon-author"></p>
+			<p id="modal_icon-tags"></p>
+			<p id="modal_icon-aliases"></p>
+
+			<br>
+			<button id="modal_icon-copy-btn" class="btn">Copy</button>
+		</section>
+		
+		<div id="overlay" class="overlay hidden"></div>
+	</span>
+
+</body>
+</html>

@@ -1,0 +1,312 @@
+html {
+	width: 100%;
+	background-color: #323232;
+	color: #cecece;
+	font-family: Arial, Helvetica, sans-serif;
+  }
+  body {
+	width: 100%;
+	margin: 0 auto;
+  }
+  
+  .icons-wrapper {
+	display: flex;
+	justify-content: space-between;
+  }
+  
+  .child {
+	flex: 1;
+  }
+  
+  .all-icons {
+	flex: 2.4;
+	padding: 5px;
+	border: 1px solid black;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+  }
+  
+  .parent {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+  }
+  
+  .icon__icon {
+	font-size: 32px;
+	padding: 5px;
+  }
+  
+  .icon {
+	border: 1px solid rgb(85, 84, 84);
+	padding: 5px;
+	margin: 5px;
+  }
+  
+  /* tooltip to show below the icon on hover */
+  /* .icon-tooltip {
+	  position: relative;
+	  display: inline-block;
+	  border-bottom: 1px dotted black;
+  } */
+  
+  .tooltip {
+	position: relative;
+	display: inline-block;
+  }
+  
+  /* Tooltip text */
+  .tooltip .tooltiptext {
+	visibility: hidden;
+	width: 120px;
+	top: 100%;
+	left: 50%;
+	margin-left: -60px;
+	background-color: black;
+	color: #fff;
+	text-align: center;
+	padding: 5px 0;
+	border-radius: 6px;
+	/* Position the tooltip text - see examples below! */
+	position: absolute;
+	z-index: 1;
+  }
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .tooltip:hover .tooltiptext {
+	visibility: visible;
+  }
+  
+  .loader {
+	height: 20px;
+	width: 250px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+  }
+  .loader--dot {
+	animation-name: loader;
+	animation-timing-function: ease-in-out;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	height: 20px;
+	width: 20px;
+	border-radius: 100%;
+	background-color: black;
+	position: absolute;
+	border: 2px solid white;
+  }
+  .loader--dot:first-child {
+	background-color: #8cc759;
+	animation-delay: 0.5s;
+  }
+  .loader--dot:nth-child(2) {
+	background-color: #8c6daf;
+	animation-delay: 0.4s;
+  }
+  .loader--dot:nth-child(3) {
+	background-color: #ef5d74;
+	animation-delay: 0.3s;
+  }
+  .loader--dot:nth-child(4) {
+	background-color: #f9a74b;
+	animation-delay: 0.2s;
+  }
+  .loader--dot:nth-child(5) {
+	background-color: #60beeb;
+	animation-delay: 0.1s;
+  }
+  .loader--dot:nth-child(6) {
+	background-color: #fbef5a;
+	animation-delay: 0s;
+  }
+  .loader--text {
+	position: absolute;
+	top: 200%;
+	left: 0;
+	right: 0;
+	width: 4rem;
+	margin: auto;
+  }
+  .loader--text:after {
+	content: "Loading";
+	font-weight: bold;
+	animation-name: loading-text;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+  }
+  
+  @keyframes loader {
+	15% {
+	  transform: translateX(0);
+	}
+	45% {
+	  transform: translateX(230px);
+	}
+	65% {
+	  transform: translateX(230px);
+	}
+	95% {
+	  transform: translateX(0);
+	}
+  }
+  @keyframes loading-text {
+	0% {
+	  content: "Loading";
+	}
+	25% {
+	  content: "Loading.";
+	}
+	50% {
+	  content: "Loading..";
+	}
+	75% {
+	  content: "Loading...";
+	}
+  }
+  
+  .header {
+	margin: 0 auto;
+	width: 100%;
+	margin-bottom: 1.2rem;
+	background-color: #232222;
+	display: flex;
+	/* justify-content: space-between; */
+	/* flex-direction: column; */
+	align-items: flex-start;
+  }
+  
+  .header-left-title {
+	display: flex;
+	background-color: #60beeb;
+	padding: 5px;
+	align-items: flex-end;
+  }
+  
+  .header-right-title {
+	padding: 5px;
+	font-size: 3rem;
+	margin-left: auto;
+	cursor: pointer;
+  }
+  
+  .amount-display {
+	text-align: right;
+  }
+  
+  .icons-header {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+  }
+  
+  .icon__icon--custom {
+	border-color: rgb(42, 74, 83);
+  }
+  
+  .modal {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 0.4rem;
+	width: 450px;
+	padding: 1.3rem;
+	min-height: 250px;
+	position: fixed;
+	top: 20%;
+	background-color: white;
+	border: 1px solid #ddd;
+	border-radius: 15px;
+	z-index: 2;
+	left: 36%;
+	/* keep always on screen */
+	/* transform: translate(-50%, -50%); */
+  
+  }
+  
+  .modal .flex {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+  }
+  
+  .modal input {
+	padding: 0.7rem 1rem;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	font-size: 0.9em;
+  }
+  
+  .modal p {
+	font-size: 0.9rem;
+	color: #777;
+	margin: 0.4rem 0 0.2rem;
+  }
+  
+  button {
+	cursor: pointer;
+	border: none;
+	font-weight: 600;
+  }
+  
+  .btn {
+	display: inline-block;
+	padding: 0.8rem 1.4rem;
+	font-weight: 700;
+	background-color: black;
+	color: white;
+	border-radius: 5px;
+	text-align: center;
+	font-size: 1em;
+  }
+  
+  .btn-open {
+	position: absolute;
+	bottom: 150px;
+  }
+  
+  .btn-close {
+	transform: translate(10px, -20px);
+	padding: 0.5rem 0.7rem;
+	background: #eee;
+	border-radius: 50%;
+	position: absolute;
+	right: 14px;
+  }
+  
+  .overlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(3px);
+	z-index: 1;
+	/* overflow: hidden; */
+  }
+  
+  .hidden {
+	display: none;
+  }
+  
+  
+  input[type="text"] {
+	  margin:10px 0;
+	  padding:10px;
+	  border-radius:10px;
+	  border: 1px solid #eee;
+	  transition: .3s border-color;
+	}
+	input[type="text"]:hover {
+	  border: 1px solid #aaa;
+	}
+  
+	select {width: 20em;}
+  
